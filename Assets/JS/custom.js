@@ -1,9 +1,16 @@
 /*jshint esnext: true */
-$(".navigation li").hover(function() {
-  var isHovered = $(this).is(":hover");
-  if (isHovered) {
-    $(this).children("div").stop().slideDown(300);
-  } else {
-    $(this).children("div").stop().slideUp(300);
-  }
+$(".dropdown").each((i,el) => { 
+  let list =  $(el).find('.list');
+  let img = $(el).find("img");
+  let dropdown = $(el).find('.toggler');
+  dropdown.click(() => {
+    list.slideToggle(500);
+    img.toggleClass("rotate-180");
+  });
 });
+
+$("#toggler").click(() => {
+  $("#img1").toggle();
+  $("#img2").toggle();
+  $(".navigation").toggleClass("  -translate-y-64");
+})

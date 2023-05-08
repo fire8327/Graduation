@@ -10,36 +10,39 @@
 </head>
 <body class="flex flex-col min-h-screen">
     <header class="p-4 bg-[#333333] text-white font-semibold">
-        <div class="container mx-auto flex items-center justify-between">
+        <nav class="container mx-auto flex items-center justify-between">
             <a href="">
                 <img src="Assets/Images/header/logo.png" alt="" class="w-32">
             </a>
-            <ul class="flex items-center gap-6 navigation">   
-                <li class="flex flex-col items-center relative">
-                    <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">11 класс</a>                    
-                </li>
-                <li>
-                    <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">9 класс</a>
-                </li>
-                <li>
-                    <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">Индивидуальный</a>
-                </li>
-                <li class="flex flex-col items-center relative">
-                    <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">Ещё</a>
-                    <div class="absolute w-max p-4 bg-[#333333] top-8 shadow-xl hidden rounded-b-lg">
-                        <ul class="flex flex-col gap-4">
-                            <li><a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">В вашей школе</a></li>
-                            <li><a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">Отзывы</a></li>
-                            <li><a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">Контакты</a></li>
-                        </ul>
+            <div class="flex flex-col lg:flex-row bg-[#333333] absolute top-[83px] lg:top-0 lg:static w-full right-0 pb-4 lg:pb-0 md:w-1/2 lg:w-auto -translate-y-64 lg:translate-y-0 transition-all duration-500 items-center gap-6 navigation"> 
+                <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">11 класс</a>    
+                <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">9 класс</a>
+                <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">Индивидуальный</a>
+                <div class="flex flex-col items-center relative dropdown">
+                    <button type="button" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full toggler">
+                        <div class="flex items-center gap-2.5">
+                            <p>Ещё</p>
+                            <img src="Assets/Images/header/dropdown.png" alt="" class="w-3 mt-0.5 transition-all duration-500">
+                        </div>
+                    </button>
+                    <div class="absolute w-max p-4 bg-[#333333] top-8 shadow-xl hidden rounded-b-lg list">
+                        <div class="flex flex-col gap-4">
+                            <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">В вашей школе</a>
+                            <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">Отзывы</a>
+                            <a href="" class="flex flex-col after:w-0 after:h-px after:bg-white after:rounded-full after:transition-all after:duration-500 hover:after:w-full">Контакты</a>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </div>
+            <button class="relative w-8 h-8 lg:hidden" type="button" id="toggler">
+                <img src="Assets/Images/header/open-menu.png" alt="" class="absolute top-0 left-0 w-full h-full" id="img1">
+                <img src="Assets/Images/header/close-menu.png" alt="" class="absolute top-0 left-0 w-full h-full hidden" id="img2">
+            </button>
+        </nav>
     </header>  
 
     <footer class="p-4 bg-[#333333] text-white font-semibold mt-auto">
-        <div class="container mx-auto flex items-center justify-between">
+        <div class="container mx-auto flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between">
             <div class="flex items-center gap-4">
                 <a href="" target="_blank"><img class="w-8" src="Assets/Images/footer/tg.png" alt=""></a>
                 <a href="" target="_blank"><img class="w-8 rounded-lg" src="Assets/Images/footer/inst.png" alt=""></a>
