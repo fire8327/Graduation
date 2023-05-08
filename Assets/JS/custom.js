@@ -1,5 +1,6 @@
 /*jshint esnext: true */
-$(".dropdown").each((i,el) => { 
+/* dropdowns */
+$(".dropdown-menu").each((i,el) => { 
   let list =  $(el).find('.list');
   let img = $(el).find("img");
   let dropdown = $(el).find('.toggler');
@@ -9,6 +10,8 @@ $(".dropdown").each((i,el) => {
   });
 });
 
+
+/* navigation */
 $("#toggler, a.menu").click(() => {
   $("#img1").toggle();
   $("#img2").toggle();
