@@ -9,8 +9,8 @@ $(".dropdown").each((i,el) => {
   });
 });
 
-$("#toggler").click(() => {
+$("#toggler, a.menu").click(() => {
   $("#img1").toggle();
   $("#img2").toggle();
-  $(".navigation").toggleClass("  -translate-y-64");
+  $(".navigation").toggleClass("-translate-y-96");
 })
